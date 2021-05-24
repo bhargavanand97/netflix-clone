@@ -1,0 +1,40 @@
+@import '../../styles.scss';
+
+.nav {
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+
+  /*Animations*/
+  @include header-animation;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    position: fixed;
+    left: 0;
+    top: 10px;
+    width: 80px;
+    cursor: pointer;
+    padding-left: 20px;
+    object-fit: contain;
+  }
+
+  &__avatar {
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  &--black {
+    background-color: $netflix-black;
+  }
+}
