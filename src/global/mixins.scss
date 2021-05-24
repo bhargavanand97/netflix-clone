@@ -1,4 +1,24 @@
+@import './variables.scss';
+
 @mixin header-animation {
   transition-timing-function: ease-in;
   transition: all 0.5s;
+}
+
+@mixin netflix-button-1 {
+  cursor: pointer;
+  color: $netflix-white;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  margin-right: 1rem;
+  background-color: rgba(51, 51, 51, 0.5);
+
+  &:hover {
+    color: #000;
+    background-color: #e6e6e6;
+    transition: all 0.2s;
+  }
 }
