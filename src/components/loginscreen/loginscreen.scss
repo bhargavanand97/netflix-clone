@@ -52,10 +52,26 @@
         font-weight: 400;
         margin-bottom: 30px;
     }
-
     &__input {
+        margin-top: 20px;
+    }
+
+    &__input-email {
         padding: 10px;
-         
+        outline-width: 0;
+        height: 30px;
+        width: 30%;
+        border: none;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    &__input-button {
+        padding: 16px 20px;
+        font-size: 1rem;
+        background-color: $neflix-red;
+        border: none;
+        color: $netflix-white;
+        font-weight: 600;
     }
     
 }
