@@ -4,16 +4,31 @@ import { Counter } from './features/counter/Counter';
 import HomeScreen from './components/homescreen/HomeScreen';
 import './App.scss';
 import { Helmet } from 'react-helmet';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import LoginScreen from './components/loginscreen/LoginScreen';
 
 const TITLE = 'Netflix-Clone';
+const user = false;
 function App() {
   
   return (
     <div className='app'>
        <Helmet>
           <title>{ TITLE }</title>
-        </Helmet>
-      <HomeScreen />
+        </Helmet>   
+      <Router>  
+        {!user ? (<LoginScreen/>):(
+        <Switch>         
+          <Route exact path="/">     
+            <HomeScreen />
+          </Route>
+        </Switch>
+     )}
+    </Router>
     </div>
   );
 }

@@ -1,0 +1,61 @@
+@import '../../styles.scss';
+
+.loginScreen {
+    position: relative;
+    height: 100%;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/8dc3f88b-a96a-4d8a-af9a-a69e6f3b2506/b2552a55-8439-4e7a-9cef-d42b787491b8/IN-en-20210524-popsignuptwoweeks-perspective_alpha_website_large.jpg') 
+    center no-repeat;
+    background-size: cover;   
+
+    &__logo {
+        @include netflix-logo-styles;
+    }
+
+    &__button {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        @include netflix-button-2;
+    }
+
+    &__gradient {
+        width: 100%;
+        z-index: 1;
+        height: 100vh;
+        background:rgba(0,0,0,0.4);
+        background-image: linear-gradient(
+            to top,
+            rgba(0,0,0,0.8) 0,
+            rgba(0,0,0,0) 60%,
+            rgba(0,0,0,0.8) 100%
+        );
+    }
+
+    &__body {
+        text-align: center;
+        z-index: 1;
+        color: #fff;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    &__heading1 {
+        font-size: 3.125rem;
+        margin-bottom: 20px;
+    }
+
+    &__heading2 {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    &__input {
+        padding: 10px;
+         
+    }
+    
+}

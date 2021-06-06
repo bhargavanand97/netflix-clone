@@ -17,13 +17,7 @@
   }
 
   &__logo {
-    position: fixed;
-    left: 0;
-    top: 10px;
-    width: 80px;
-    cursor: pointer;
-    padding-left: 20px;
-    object-fit: contain;
+    @include netflix-logo-styles;
   }
 
   &__avatar {
