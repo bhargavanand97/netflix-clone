@@ -59,4 +59,36 @@
         border: none;
         cursor: pointer;
     }
+
+    &__subscriptions {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__plan {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        &-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-button {
+            @include netflix-button-2;
+        }
+
+        &--current {
+            .profileScreen__plan-button {
+                @include netflix-button-1;
+                margin-right: 0;
+                border-radius: unset;
+            } 
+        }
+    }
 }
